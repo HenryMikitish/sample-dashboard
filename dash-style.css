@@ -24,14 +24,22 @@ body > .grid {
 }
 
 .actions > div {
-    padding: 10px 0 10px 8px;  
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 8px;
+    height: 40px;    
 }
 
 .actions > div:hover {
     background-image: url(wood.png);
     background-size: 200px;
-    border-left: 6px solid #9ff6ffff;
+
+    border-left: 8px solid #9ff6ffff;
+    color: #9ff6ffff;
+
+    font-size: 1.1em;
     transition: all .2s;
+    cursor: default;
 
 }
 
