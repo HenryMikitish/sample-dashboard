@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dash-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">
     <title>RPG Dream</title>
 </head>
 <body>
@@ -14,17 +15,24 @@
         <div class="header">
             <div>
                 <div class="search">
-                    <label for="search">SEARCH</label>
+                    <label for="search"><img src="search-icon.png" alt="Search"></label>
                     <input id="search" name="search" type="text" placeholder="Search!" required/>
                 </div>
 
                 <div class="profile">
-                    <div>Alerts</div>
-                    <div>Profile</div>
+                    <div><img src="alerts.svg" alt="Alerts"></div>
+                    <div>
+                        <img src="user-profile.png" alt="Alerts">
+                        <div>John Vano</div>
+                    </div>
                 </div>
             </div>
             
-            <div class="create">Create!</div>
+            <div class="create">
+                    <button id="submit">New World</button>
+                    <button id="submit">New Character</button>
+                    <button id="submit">Join/Invite</button>
+            </div>
         </div>
 
         <div class="sidebar">
