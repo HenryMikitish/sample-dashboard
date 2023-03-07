@@ -15,9 +15,24 @@ body > .grid {
     overflow: auto;
     min-height: 100vh;
 
-    gap: 10px;
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: 90px 100px 1fr;
+}
+
+.actions + .actions {
+    margin-top: 20px;
+}
+
+.actions > div {
+    padding: 10px 0 10px 8px;  
+}
+
+.actions > div:hover {
+    background-image: url(wood.png);
+    background-size: 200px;
+    border-left: 6px solid #9ff6ffff;
+    transition: all .2s;
+
 }
 
 .create {
@@ -56,7 +71,9 @@ body > .grid {
     justify-content: space-evenly;
 
     background-color: rgb(255, 255, 255);
-    border-bottom: 2px solid rgb(142, 106, 97);
+    border-bottom: 2px solid rgb(67, 29, 20);
+
+    padding-left: 10px;
 }
 
 .header > div + div {
@@ -66,6 +83,19 @@ body > .grid {
 .header > div:first-child {
     display: flex;
     justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    padding: 10px 32px 10px 0;
+    background-color: rgb(67, 29, 20);
+}
+
+.logo > img {
+    height: 45px;
 }
 
 .profile {
@@ -163,6 +193,8 @@ body > .grid {
     grid-area: 1 / 1 / -1 / 2;
     display: flex;
     flex-direction: column;
-
     justify-content: flex-start;
+
+    color: white;
+    background-color: rgb(106, 39, 24);
 }
