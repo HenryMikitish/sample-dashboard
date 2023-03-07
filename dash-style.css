@@ -48,6 +48,8 @@ body > .grid {
     display: flex;
     justify-content: flex-start;
     gap: 2vw;
+
+    padding-left: 25.8px;
 }
 
 .create > button {
@@ -120,6 +122,7 @@ body > .grid {
 
 .info > div:hover {
     background-color: rgb(208, 230, 232);
+    transition: all .3s;
     cursor: pointer;
 }
 
@@ -196,6 +199,12 @@ body > .grid {
     padding: 12px;
 }
 
+.project:hover {
+    background-color: rgb(238, 252, 253);
+    transition: all .3s;
+    cursor: pointer;
+}
+
 .scroll {
     overflow-y: scroll;
     scrollbar-color: rebeccapurple green;
@@ -256,5 +265,8 @@ body > .grid {
 @media only screen and (max-width: 1000px) {
     .info-container {
         display: none;
+    }
+    .projects {
+    grid-area: 2 / 2 / -1 / -1;  
     }
 }
