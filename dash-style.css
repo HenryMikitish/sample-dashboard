@@ -213,7 +213,6 @@ body > .grid {
 .project {
     margin-bottom: 10px;
     background-color: white;
-    padding: 12px;
     border-radius: 15px;
 
     border-top: 1px solid transparent;
@@ -231,16 +230,28 @@ body > .grid {
 .project > div {
     display: flex;
     gap: 5px;
-}
-
-.project > div + div {
-    margin-top: 10px;
-    justify-content: right;
+    padding: 0 2px 0 12px;
 }
 
 .project > div > div {
     height: 40px;
     width: 40px;
+}
+
+.project > div:first-child {
+    font-size: 1.1em;
+    padding: 12px 12px 12px 12px;
+    font-family: var(--second-font);
+}
+
+.project > div:nth-child(2) {
+    font-size: .9em;
+    margin-bottom: 3px;
+}
+
+.project > div:last-child {
+    justify-content: right;
+    margin-bottom: 2px;
 }
 
 .project > div > div > img {
