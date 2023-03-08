@@ -1,3 +1,16 @@
+:root {
+    --main-border: rgb(222, 200, 195);
+
+    --main-highlight: #9ff6ffff;
+    --icon-highlight: rgb(197, 249, 254);
+    --secondary-highlight: rgb(233, 253, 255);
+    --tertiary-highlight: rgb(238, 252, 253);
+
+    --button-brown: rgb(106, 39, 24);
+    --logo-bdrop: rgb(67, 29, 20);
+    --project-bdrop: rgb(255, 244, 242);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -58,7 +71,7 @@ body > .grid {
     font-family: 'Arvo', Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
 
-    background-color: rgb(106, 39, 24);
+    background-color: var(--button-brown);
     color: white;
     padding: 7px 12px 7px 12px;
     border-radius: 15px;
@@ -78,7 +91,7 @@ body > .grid {
     justify-content: space-between;
 
     background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(222, 200, 195);
+    border-bottom: 1px solid var(--main-border);
 
     padding-left: 10px;
     min-width: 600px;
@@ -93,7 +106,7 @@ body > .grid {
 
 .info-container {
     grid-area: 2 / 3 / -1 / -1;
-    border-left: 1px solid rgb(222, 200, 195);
+    border-left: 1px solid var(--main-border);
 }
 
 .info {
@@ -102,7 +115,7 @@ body > .grid {
     align-items: center;
     border-radius: 15px;
     margin: 20px;
-    background-color: rgb(233, 253, 255);
+    background-color: var(--secondary-highlight);
     overflow: hidden;
 }
 
@@ -132,7 +145,7 @@ body > .grid {
     align-items: center;
     height: 90px;
     padding: 10px 0 10px 0;
-    background-color: rgb(67, 29, 20);
+    background-color: var(--logo-bdrop);
 }
 
 .logo > img {
@@ -178,36 +191,40 @@ body > .grid {
 }
 
 .profile > div:last-child > img:hover {
-    background-color:#fff;
-    border:8px solid rgb(197, 249, 254);  
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
+    background-color: #fff;
+    border: 8px solid var(--icon-highlight);  
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
 }
 
 .projects {
     grid-area: 2 / 2 / -1 / 2;
     display: flex;
     flex-direction: column;
+    background-color: var(--project-bdrop);
 
     gap: 10px;
     flex-grow: 1;
+    border: 25px solid var(--project-bdrop);
 }
 
 .project {
-    border-bottom: 1px solid rgb(222, 200, 195);
+    margin-bottom: 10px;
+    background-color: white;
+    border-bottom: 1px solid var(--main-border);
     padding: 12px;
+    border-radius: 15px;
 }
 
 .project:hover {
-    background-color: rgb(238, 252, 253);
+    background-color: var(--tertiary-highlight);
     transition: all .3s;
     cursor: pointer;
 }
 
 .scroll {
     overflow-y: scroll;
-    scrollbar-color: rebeccapurple green;
     scrollbar-width: thin;
 
     width: 100%;
