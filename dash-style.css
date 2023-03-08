@@ -9,6 +9,8 @@
     --button-brown: rgb(106, 39, 24);
     --logo-bdrop: rgb(67, 29, 20);
     --project-bdrop: rgb(250, 250, 250);
+
+    --second-font: 'Arvo', Georgia, 'Times New Roman', Times, serif;
 }
 
 * {
@@ -18,9 +20,10 @@
 }
 
 body {
-    font-family: 'Arvo', Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     overflow: hidden;
+    cursor: default;
 }
 
 body > .grid {
@@ -66,7 +69,7 @@ body > .grid {
 .create > button {
     border: none;
 
-    font-family: 'Arvo', Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--second-font);
     font-size: 14px;
 
     background-color: var(--button-brown);
@@ -115,6 +118,12 @@ body > .grid {
     margin: 20px;
     background-color: var(--secondary-highlight);
     overflow: hidden;
+}
+
+.info > h1 {
+    font-size: 1.1em;
+    padding: 10px 0 10px 0;
+    font-family: var(--second-font);
 }
 
 .info > div {
@@ -183,7 +192,6 @@ body > .grid {
 }
 
 .profile > div:first-child > img:hover {
-    /*filter: brightness(.8);*/
     transform: scale(1.20);
     transition: all .15s;
 }
@@ -218,7 +226,6 @@ body > .grid {
     background-color: rgb(223, 223, 223);
     border: 1px solid var(--main-border);
     transition: all .3s;
-    cursor: default;
 }
 
 .project > div {
@@ -231,12 +238,18 @@ body > .grid {
     justify-content: right;
 }
 
-.project > div > img {
+.project > div > div {
     height: 40px;
+    width: 40px;
+}
+
+.project > div > div > img {
+    height: 40px;
+    width: 40px;
     border: 6px solid transparent;
 }
 
-.project > div > img:hover {
+.project > div > div > img:hover {
     border: 6px solid var(--icon-highlight);
     transition: all .1s ease-out;
     border-radius: 50%;
@@ -304,6 +317,48 @@ body > .grid {
 
     border-right: 1px solid rgb(222, 200, 195);
     background-color: white;
+
+    font-family: var(--second-font);
+}
+
+.tooltip {
+    display: inline-block;
+    visibility: hidden;
+    position: relative;
+    z-index: 1;
+    bottom: 188%;
+    right: 25%;
+    opacity: 0;
+
+    background-color: var(--logo-bdrop);
+    color: #fff;
+    text-align: center;
+    font-size: .7em;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 100;
+
+    width: 64px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--logo-bdrop) transparent transparent transparent;
+  }
+
+div:hover > .tooltip {
+    visibility: visible;
+    opacity: 1;
+
+    transition: .3s;
+    transition-delay: .7s;
 }
 
 @media only screen and (max-width: 1000px) {
